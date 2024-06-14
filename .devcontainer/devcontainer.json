@@ -1,0 +1,67 @@
+{
+    "name": "ubuntu-devcontainer",
+    "remoteUser": "root",
+    "dockerComposeFile": "./docker-compose.yaml",
+    "workspaceFolder": "/root/workdir",
+    "service": "ubuntu-devcontainer",
+    "mounts": [
+        {
+            "type": "bind",
+            "source": "${localWorkspaceFolder}",
+            "target": "/root/workdir/"
+        }
+    ],
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "python.formatting.provider": "black",
+                "editor.formatOnSave": true,
+                "python.formatting.blackArgs": [
+                    "--line-length",
+                    "88"
+                ],
+                "flake8.args": [
+                    "--max-line-length=88",
+                    "--ignore=E501,W503,E203"
+                ],
+                "editor.codeActionsOnSave": {
+                    "source.organizeImports": "explicit"
+                },
+                "isort.args": [
+                    "--profile",
+                    "black"
+                ]
+            },
+            "extensions": [
+                "ms-python.black-formatter",
+                "aaron-bond.better-comments",
+                "oderwat.indent-rainbow",
+                "MS-CEINTL.vscode-language-pack-ja",
+                "ZainChen.json",
+                "nickdemayo.vscode-json-editor",
+                "ccimage.jsonviewer",
+                "ms-python.python",
+                "ms-python.vscode-pylance",
+                "donjayamanne.python-environment-manager",
+                "donjayamanne.python-extension-pack",
+                "KevinRose.vsc-python-indent",
+                "Gruntfuggly.todo-tree",
+                "vscode-icons-team.vscode-icons",
+                "tomoki1207.pdf",
+                "redhat.vscode-yaml",
+                "mhutchie.git-graph",
+                "donjayamanne.githistory",
+                "waderyan.gitblame",
+                "exiasr.hadolint",
+                "ms-azuretools.vscode-docker",
+                "SimonSiefke.svg-preview",
+                "DavidAnson.vscode-markdownlint",
+                "Tyriar.sort-lines",
+                "usernamehw.errorlens",
+                "ms-python.flake8",
+                "ms-python.isort",
+                "mutantdino.resourcemonitor"
+            ]
+        }
+    }
+}

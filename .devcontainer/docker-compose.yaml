@@ -1,0 +1,6 @@
+services:
+  ubuntu-devcontainer:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    tty: true
